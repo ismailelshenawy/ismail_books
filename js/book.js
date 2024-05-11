@@ -45,9 +45,9 @@ async function gitApiBook() {
 gitApiBook();
 ///////////////////////////////////////////////////////
 // =================================================
-// فنيكش لعرض الكتاب الواحد 
+// فنيكش لعرض الكتاب الواحد
 function display(i) {
-  console.log(i);
+  // console.log(i);
   innerForHtml = ` <div class=" card h-100" >
         <img src="${books[i].book_image}" alt="" class="card-img-top h-75"  >
           <div class="card-body">
@@ -75,49 +75,46 @@ display();
 // ==================================================================================
 // ================================================================
 // عمل فينكشن للسيرش
-// function searchBooks() {
-//   var search2 = inputSearch.value;
-//   var search3 = "trade-fiction-paperback";
-//   console.log(search2);
-//   async function gitApiBook() {
+function searchBooks() {
+  var search2 = inputSearch.value;
+  var search3 = "trade-fiction-paperback";
+  // console.log(search2);
+  async function gitApiBook() {
+    readBook1 = await fetch(
+      `https://api.nytimes.com/svc/books/v3/lists/current/${search2}.json?api-key=dUI0I7UN98DTkJjq2AianRrGrqCdxqKS`
+    );
 
-//    readBook1 = await fetch(
-//     `https://api.nytimes.com/svc/books/v3/lists/current/${search2}.json?api-key=dUI0I7UN98DTkJjq2AianRrGrqCdxqKS`
-//   );
+    readBook2 = await readBook1.json();
+    books = readBook2.results.books;
 
-//     readBook2 = await readBook1.json();
-//     books = readBook2.results.books;
+    // console.log(books);
+    var innerForHtml;
+    for (let i = 0; i < books.length; i++) {
+      innerForHtml += ` <div class="card col-md-4 col-sm-2 m-1 " style="width: 18rem">
+          <img src="${books[i].book_image}" alt="" class="card-img-top" onclick=" display(${i})">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="موضوع الكتاب">
+           ${books[i].description}.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"> ${books[i].title}اسم الكتاب</li>
+              <li class="list-group-item"> ${books[i].author}اسم المؤلف</li>
+              <li class="list-group-item">${books[i].publisher}الناشر</li>
+            </ul>
+            <div class="موضوع الكتاب">
+              <a href="${books[i].buy_links[0].url}" class="card-link">شراء الكتاب</a>
+              <a href="${books[i].buy_links[1].url}" class="card-link">شراء الكتاب</a>
+            </div>
+          </div>
 
-//     console.log(books);
-//     var innerForHtml;
-//     for (let i = 0; i < books.length; i++) {
-//       innerForHtml += ` <div class="card col-md-4 col-sm-2 m-1 " style="width: 18rem">
-//           <img src="${books[i].book_image}" alt="" class="card-img-top" onclick=" display(${i})">
-//             <div class="card-body">
-//               <h5 class="card-title">Card title</h5>
-//               <p class="موضوع الكتاب">
-//            ${books[i].description}.
-//               </p>
-//             </div>
-//             <ul class="list-group list-group-flush">
-//               <li class="list-group-item"> ${books[i].title}اسم الكتاب</li>
-//               <li class="list-group-item"> ${books[i].author}اسم المؤلف</li>
-//               <li class="list-group-item">${books[i].publisher}الناشر</li>
-//             </ul>
-//             <div class="موضوع الكتاب">
-//               <a href="${books[i].buy_links[0].url}" class="card-link">شراء الكتاب</a>
-//               <a href="${books[i].buy_links[1].url}" class="card-link">شراء الكتاب</a>
-//             </div>
-//           </div>
+       `;
+    }
 
-//        `;
-//     }
-
-//     bookInner.innerHTML = innerForHtml;
-//   }
-//   gitApiBook();
-// }
-
+    bookInner.innerHTML = innerForHtml;
+  }
+  gitApiBook();
+}
 
 // ++++++++++++++++++++++++++++++++++++++
-

@@ -6,14 +6,10 @@
     <title>front</title>
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-   
-    />
+    <link rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="bg-secondary">
-
     <div class="bg-dark h-100 w-100">
       <lu
         class="d-flex flex-row justify-content-around bg-danger-subtle h-50px list-unstyled fw-bold align-items-center"
@@ -39,7 +35,20 @@
           <a href="#" class="text-decoration-none">call us</a>
         </li>
         <li class="">
-          <input type="text" placeholder="search" id="inputSearch" />
+          <select
+            id="inputSearch"
+            class="mb-3"
+            aria-label=".form-select-lg example"
+          >
+            <option selected>اختار القسم </option>
+            <option value="advice-how-to-and-miscellaneous">كيف تعمل</option>
+            <option value="paperback-nonfiction">التجارة</option>
+            <option value="trade-fiction-paperback">التجارة و الطموح </option>
+            <option value="hardcover-nonfiction">واقعى</option>
+            <option value="Hardcover Fiction">الخيال</option>
+            <option value="combined-print-and-e-book-nonfiction"> الالكترونيات</option>
+            <option value="combined-print-and-e-book-fiction">الالكترونيات و الخيال</option>
+          </select>
         </li>
         <li class="">
           <button
@@ -47,76 +56,14 @@
             type="submit"
             onclick="(searchBooks())"
           >
-            Search
+            Go
           </button>
-        </li>
-        <div class="dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown button
-          </button>
-          <ul
-            class="dropdown-menu"
-            aria-labelledby="dropdownMenuButton1"
-            value="this.value"
-          >
-            <li>
-              <a
-                class="dropdown-item"
-                value="advice-how-to-and-miscellaneous"
-                href="#"
-                value="paperback-nonfiction"
-                >combined-print-and-e-book-fiction</a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#" value="trade-fiction-paperback"
-                >Another action</a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#" value="trade-fiction-paperback"
-                >Something else here</a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#" value="hardcover-nonfiction"
-                >Something else here</a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#" value="Hardcover Fiction"
-                >Something else here</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                value="combined-print-and-e-book-nonfiction"
-                >Something else here</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                value="combined-print-and-e-book-fiction"
-                >Something else here</a
-              >
-            </li>
-          </ul>
-        </div>
-      </lu>
+        </li></lu
+      >
     </div>
-  
+
     <!-- =====================+++++++++++++++++ -->
-      <!-- =======================================+++++++++ -->
+    <!-- =======================================+++++++++ -->
     <div class="suction container m-3" id="ForSingelBook">
       <div class="row m-3 justify-content-center" id="bookInner"></div>
     </div>
@@ -126,7 +73,7 @@
     <!-- ***************************************** -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    
+
     <script src="js/book.js"></script>
   </body>
 </html>
