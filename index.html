@@ -6,60 +6,135 @@
     <title>front</title>
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+   
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="bg-secondary">
-    <div class="header bg-info h-50px text-centerd-">
-      <div class="navbar-dark bg-dark h-100">
-        <lu
-          class="row justify-content-start bg-danger-subtle h-100 align-content-center list-unstyled"
-        >
-          <li class="col-3">
-            <a href="#" class="text-decoration-none" onclick="gitApiBook()"
-              >Home</a
-            >
-          </li>
-          <li class="col-3">
-            <a href="#" class="text-decoration-none">Book sections</a>
-          </li>
-          <li class="col-3">
-            <a href="#" class="text-decoration-none">Our services</a>
-          </li>
-          <li class="col-3">
-            <a href="#" class="text-decoration-none">call us</a>
-          </li>
-        </lu>
-      </div>
+
+    <div class="bg-dark h-100 w-100">
+      <lu
+        class="d-flex flex-row justify-content-around bg-danger-subtle h-50px list-unstyled fw-bold align-items-center"
+      >
+        <li class="">
+          <img
+            src="img/rptgtpxd-1396254731.avif"
+            alt=""
+            width="60 px"
+            class="rounded-circle"
+          />
+          <a href="#" class="text-decoration-none" onclick="gitApiBook()"
+            >Home</a
+          >
+        </li>
+        <li class="">
+          <a href="#" class="text-decoration-none">Book sections</a>
+        </li>
+        <li class="">
+          <a href="#" class="text-decoration-none">Our services</a>
+        </li>
+        <li class="">
+          <a href="#" class="text-decoration-none">call us</a>
+        </li>
+        <li class="">
+          <input type="text" placeholder="search" id="inputSearch" />
+        </li>
+        <li class="">
+          <button
+            class="btn btn-outline-dark"
+            type="submit"
+            onclick="(searchBooks())"
+          >
+            Search
+          </button>
+        </li>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown button
+          </button>
+          <ul
+            class="dropdown-menu"
+            aria-labelledby="dropdownMenuButton1"
+            value="this.value"
+          >
+            <li>
+              <a
+                class="dropdown-item"
+                value="advice-how-to-and-miscellaneous"
+                href="#"
+                value="paperback-nonfiction"
+                >combined-print-and-e-book-fiction</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" value="trade-fiction-paperback"
+                >Another action</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" value="trade-fiction-paperback"
+                >Something else here</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" value="hardcover-nonfiction"
+                >Something else here</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" value="Hardcover Fiction"
+                >Something else here</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                value="combined-print-and-e-book-nonfiction"
+                >Something else here</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                value="combined-print-and-e-book-fiction"
+                >Something else here</a
+              >
+            </li>
+          </ul>
+        </div>
+      </lu>
     </div>
-    <!-- -------------------- -->
-    <div class="suction container m-3">
+  
+    <!-- =====================+++++++++++++++++ -->
+      <!-- =======================================+++++++++ -->
+    <div class="suction container m-3" id="ForSingelBook">
       <div class="row m-3 justify-content-center" id="bookInner"></div>
     </div>
 
     <!-- *************************** -->
-    <!-- <div class=" card " >
-      <img
-        src="img/alexandria.jpg"
-        alt=""
-        class="card-img-top "
-        onclick=" display(${i})"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="موضوع الكتاب">${books[i].description}.</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">${books[i].title}اسم الكتاب</li>
-        <li class="list-group-item">${books[i].author}اسم المؤلف</li>
-        <li class="list-group-item">${books[i].price}السعر</li>
-      </ul>
-      <div class="card-body">
-        <a href="${books[i].buy_links[0].url}" class="card-link">شراء الكتاب</a>
-        <a href="${books[i].buy_links[1].url}" class="card-link">شراء الكتاب</a>
-      </div>
-    </div> -->
+
+    <!-- ***************************************** -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    
     <script src="js/book.js"></script>
   </body>
 </html>
+
+<!-- combined-print-and-e-book-fiction
+combined-print-and-e-book-nonfiction
+Hardcover Fiction
+hardcover-nonfiction
+trade-fiction-paperback
+paperback-nonfiction
+advice-how-to-and-miscellaneous -->
