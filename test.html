@@ -7,28 +7,116 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <link rel="stylesheet" href="css/test.css" />
   </head>
-    <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="img/Books17.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="img/images.jpeg" alt=""></div>
-      <div class="swiper-slide"><img src="img/lovepik-library-to-find-books-picture_501427968.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="img/pexels-photo-1370295.jpeg" alt=""></div>
-      <div class="swiper-slide"><img src="img/pexels-photo-1370295.jpeg" alt=""></div>
-      <div class="swiper-slide"><img src="img/Books17.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="img/Books17.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="img/Books17.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="img/Books17.jpg" alt=""></div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
+
   <body>
+    <!-- --------------------  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a href="" class="navbar-brand">
+          <img
+            src="img/rptgtpxd-1396254731.avif"
+            alt=""
+            width="60 px"
+            height="60 px"
+            class="rounded-circle"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <lu class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link text-decoration-none"
+                onclick="gitApiBook()"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-decoration-none"
+                >Book sections</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-decoration-none">Our services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-decoration-none">call us</a>
+            </li>
+          </lu>
+          <form class="d-flex">
+            <select
+              id="inputSearch"
+              class="form-control me-2"
+              aria-label=".form-select-lg example"
+            >
+              <option selected>اختار القسم</option>
+              <option value="advice-how-to-and-miscellaneous">كيف تعمل</option>
+              <option value="paperback-nonfiction">التجارة</option>
+              <option value="trade-fiction-paperback">التجارة و الطموح</option>
+              <option value="hardcover-nonfiction">واقعى</option>
+              <option value="Hardcover Fiction">الخيال</option>
+              <option value="combined-print-and-e-book-nonfiction">
+                الالكترونيات
+              </option>
+              <option value="combined-print-and-e-book-fiction">
+                الالكترونيات و الخيال
+              </option>
+            </select>
+            <button
+              class="btn btn-outline-dark"
+              type="button"
+              onclick="(searchBooks())"
+            >
+              Go
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- ---------------------- -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/Books17.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="img/images.jpeg" alt="" /></div>
+        <div class="swiper-slide">
+          <img
+            src="img/lovepik-library-to-find-books-picture_501427968.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/pexels-photo-1370295.jpeg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/pexels-photo-1370295.jpeg" alt="" />
+        </div>
+        <div class="swiper-slide"><img src="img/Books17.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="img/Books17.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="img/Books17.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="img/Books17.jpg" alt="" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/test.js"></script>
+    <script src="js/test.js"></script>
   </body>
 </html>
