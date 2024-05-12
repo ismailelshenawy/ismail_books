@@ -16,12 +16,12 @@ async function gitApiBook() {
   // console.log(books);
 
   console.log(books);
-  var innerForHtml;
+  var innerForHtml = ``;
   for (let i = 0; i < books.length; i++) {
     innerForHtml += ` <div class="card col-md-4 col-sm-2 m-1 " style="width: 18rem">
         <img src="${books[i].book_image}" alt="" class="card-img-top" onclick=" display(${i})">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">${books[i].title}</h5>
             <p class="موضوع الكتاب">
          ${books[i].description}.
             </p>
@@ -51,7 +51,7 @@ function display(i) {
   innerForHtml = ` <div class=" card h-100" >
         <img src="${books[i].book_image}" alt="" class="card-img-top h-75"  >
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">${books[i].title}</h5>
             <p class="موضوع الكتاب">
          ${books[i].description}.
             </p>
@@ -88,12 +88,12 @@ function searchBooks() {
     books = readBook2.results.books;
 
     // console.log(books);
-    var innerForHtml;
+    var innerForHtml = ``;
     for (let i = 0; i < books.length; i++) {
       innerForHtml += ` <div class="card col-md-4 col-sm-2 m-1 " style="width: 18rem">
           <img src="${books[i].book_image}" alt="" class="card-img-top" onclick=" display(${i})">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">${books[i].title}</h5>
               <p class="موضوع الكتاب">
            ${books[i].description}.
               </p>
