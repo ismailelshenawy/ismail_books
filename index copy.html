@@ -86,24 +86,39 @@
     </nav>
     <!-- ================end nav bar +++++++++++++++++ -->
     <!-- =======================================+++++++++ -->
-    <div class="suction container m-3" id="ForSingelBook">
-      <div class="row m-3 justify-content-center" id="bookInner"></div>
-    </div>
 
+    <div id="ForSingelBook" class="container m-3">
+      <div class="row">
+        <div class="col col-md-6">
+          <img src="img/images.jpeg" alt="" class="card-img-top w-100" height="300px" width="300 px"/>
+        </div>
+        <div class="col col-md-6">
+          <div>
+            <h5 class="card-title">books[i].title</h5>
+            <p class="موضوع الكتاب">${books[i].description}.</p>
+
+            <ul class=" list-unstyled">
+              <li>${books[i].title}اسم الكتاب</li>
+              <li>${books[i].author}اسم المؤلف</li>
+              <li>${books[i].price}السعر</li>
+            </ul>
+
+            <a href="${books[i].buy_links[0].url}" class="card-link"
+              >شراء الكتاب</a
+            >
+            <a href="${books[i].buy_links[1].url}" class="card-link"
+              >شراء الكتاب</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- *************************** -->
 
     <!-- ***************************************** -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
 
-    <script src="js/book.js"></script>
+    <script src="js/book copy.js"></script>
   </body>
 </html>
-
-<!-- combined-print-and-e-book-fiction
-combined-print-and-e-book-nonfiction
-Hardcover Fiction
-hardcover-nonfiction
-trade-fiction-paperback
-paperback-nonfiction
-advice-how-to-and-miscellaneous -->

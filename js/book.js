@@ -68,7 +68,7 @@ function display(i) {
         </div>
 
      `;
-  bookInner.innerHTML = innerForHtml;
+  ForSingelBook.innerHTML = innerForHtml;
 }
 display();
 // ----------------------------
