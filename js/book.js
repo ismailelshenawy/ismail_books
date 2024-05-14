@@ -1,7 +1,7 @@
 var bookInner = document.getElementById("bookInner");
 var readBook1;
 var readBook2;
-var books;
+var books=[];
 var ForSingelBook = document.getElementById("ForSingelBook");
 var inputSearch = document.getElementById("inputSearch");
 // ده المفروض نوع فى list بيجيب كل الكتب full-overview
@@ -13,9 +13,6 @@ async function gitApiBook() {
 
   readBook2 = await readBook1.json();
   books = readBook2.results.books;
-  // console.log(books);
-
-  console.log(books);
   var innerForHtml = ``;
   for (let i = 0; i < books.length; i++) {
     innerForHtml += ` <div class="card col-md-4 col-sm-2 m-1 " style="width: 18rem">
@@ -46,9 +43,9 @@ gitApiBook();
 // =================== end first function===============
 
 // ==============strat function for singel book=========
-// فنيكش لعرض الكتاب الواحد
+
 function display(i) {
-  // console.log(i);
+ 
   innerForHtml = `<div class="row bg-body-tertiary ">
         <div class="col p-0 ">
           <img
@@ -88,7 +85,6 @@ function display(i) {
           </div>
         </div>
       </div>
-
      `;
   ForSingelBook.innerHTML = innerForHtml;
 }
@@ -139,8 +135,3 @@ function searchBooks() {
   gitApiBook();
 }
 // ============== end function for search ==============
-// ================== for trying ======
-function testOnClickForHomeButton(){
-  console.log("we can do any thing")
-}
-testOnClickForHomeButton();

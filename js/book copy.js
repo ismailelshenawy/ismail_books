@@ -4,3 +4,9 @@ var swiper = new Swiper(".mySwiper", {
     dynamicBullets: true,
   },
 });
+
+
+
+function hhhhh() {
+  console.log("hhfsjkhhdf");
+}
