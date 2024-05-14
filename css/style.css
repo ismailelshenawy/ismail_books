@@ -1,6 +1,52 @@
-
-
 .w-h {
     height: 100vh;
     width: 100vh;
+}
+
+.color {
+    background: #6f42c1 !important
+}
+
+.color2 {
+    background: #ad91e2 !important
+}
+
+.color3 {
+    background: #1d132f !important
+}
+
+/* ===================== */
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

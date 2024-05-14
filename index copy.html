@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="bg-secondary">
+  <body class="bg-primary">
     <!-- ------------------nav bar ----------------  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -85,37 +90,161 @@
       </div>
     </nav>
     <!-- ================end nav bar +++++++++++++++++ -->
-    <!-- =======================================+++++++++ -->
+    <!-- ================swiper start +++++++++++++++++ -->
 
-    <div id="ForSingelBook" class="container m-3">
-      <div class="row">
-        <div class="col col-md-6">
-          <img src="img/images.jpeg" alt="" class="card-img-top w-100" height="300px" width="300 px"/>
-        </div>
-        <div class="col col-md-6">
-          <div>
-            <h5 class="card-title">books[i].title</h5>
-            <p class="موضوع الكتاب">${books[i].description}.</p>
+ <!-- <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/alexandria.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/Books17.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/images.jpeg" alt=""></div>
+      <div class="swiper-slide"><img src="img/lovepik-library-to-find-books-picture_501427968.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/pexels-photo-1370295.jpeg" alt=""></div>
+      <div class="swiper-slide"><img src="img/pngtree-an-open-book-next-to-a-pair-of-glasses-picture-image_2599835.jpg" alt=""></div>
 
-            <ul class=" list-unstyled">
-              <li>${books[i].title}اسم الكتاب</li>
-              <li>${books[i].author}اسم المؤلف</li>
-              <li>${books[i].price}السعر</li>
-            </ul>
+    </div>
+  </div> -->
 
-            <a href="${books[i].buy_links[0].url}" class="card-link"
-              >شراء الكتاب</a
-            >
-            <a href="${books[i].buy_links[1].url}" class="card-link"
-              >شراء الكتاب</a
-            >
-          </div>
-        </div>
-      </div>
+  <!-- ======================== end swpier===============+++++++++ -->
+
+    <div id="ForSingelBook" class="container m-3 ">
+    
+
+
+  
     </div>
     <!-- *************************** -->
 
     <!-- ***************************************** -->
+
+    <!-- ********************start footer********************* -->
+
+    <footer class="bg-body-tertiary text-center">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input
+                    type="email"
+                    id="form5Example26"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="form5Example26"
+                    >Email address</label
+                  >
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button
+                  data-mdb-ripple-init
+                  type="submit"
+                  class="btn btn-primary mb-4"
+                >
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+      </div>
+      <!-- Grid container -->
+      <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <!-- Twitter -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <!-- Google -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <!-- Github -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2020 Copyright:
+        <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
 

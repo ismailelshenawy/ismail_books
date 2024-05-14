@@ -43,38 +43,60 @@ async function gitApiBook() {
   bookInner.innerHTML = innerForHtml;
 }
 gitApiBook();
-///////////////////////////////////////////////////////
-// =================================================
+// =================== end first function===============
+
+// ==============strat function for singel book=========
 // فنيكش لعرض الكتاب الواحد
 function display(i) {
   // console.log(i);
-  innerForHtml = ` <div class=" card h-100" >
-        <img src="${books[i].book_image}" alt="" class="card-img-top h-75"  >
-          <div class="card-body">
-            <h5 class="card-title">${books[i].title}</h5>
-            <p class="موضوع الكتاب">
-         ${books[i].description}.
-            </p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"> ${books[i].title}اسم الكتاب</li>
-            <li class="list-group-item"> ${books[i].author}اسم المؤلف</li>
-            <li class="list-group-item">${books[i].price}السعر</li>
-          </ul>
-          <div class="card-body">
-            <a href="${books[i].buy_links[0].url}" class="card-link">شراء الكتاب</a>
-            <a href="${books[i].buy_links[1].url}" class="card-link">شراء الكتاب</a>
+  innerForHtml = `<div class="row bg-body-tertiary ">
+        <div class="col p-0 ">
+          <img
+            src="${books[i].book_image}"
+            alt=""
+            class="w-100 "
+            width="400px"
+            height="400px"
+          />
+        </div>
+        <div class="col align-self-center">
+          <div >
+            <h5 >${books[i].title}</h5>
+            <p >${books[i].description}.</p>
+
+            <ul class="list-unstyled">
+              <li>${books[i].title}اسم الكتاب</li>
+              <li>author : ${books[i].author}</li>
+              <li>${books[i].price}السعر</li>
+            </ul>
+            <div class="">
+              <button class="btn btn-danger">
+                <a
+                  href="${books[i].buy_links[0].url}"
+                  class="text-decoration-none"
+                  >شراء الكتاب</a
+                >
+              </button>
+              <button class="btn btn-danger">
+                <a
+                  href="${books[i].buy_links[1].url}"
+                  class="text-decoration-none"
+                  >شراء الكتاب</a
+                >
+              </button>
+            </div>
           </div>
         </div>
+      </div>
 
      `;
   ForSingelBook.innerHTML = innerForHtml;
 }
 display();
-// ----------------------------
-// ==================================================================================
-// ================================================================
-// عمل فينكشن للسيرش
+// =========================end funtion for singel book===========
+
+
+// ============== strat function for search ===============
 function searchBooks() {
   var search2 = inputSearch.value;
   var search3 = "trade-fiction-paperback";
@@ -116,5 +138,9 @@ function searchBooks() {
   }
   gitApiBook();
 }
-
-// ++++++++++++++++++++++++++++++++++++++
+// ============== end function for search ==============
+// ================== for trying ======
+function testOnClickForHomeButton(){
+  console.log("we can do any thing")
+}
+testOnClickForHomeButton();
