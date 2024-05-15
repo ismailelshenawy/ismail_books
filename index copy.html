@@ -7,15 +7,12 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style copy.css" />
   </head>
-  <body class="bg-primary">
-    <!-- ------------------nav bar ----------------  -->
+  <body class="bg-secondary">
+    <!-- -----------------1-nav bar ----------------  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a href="" class="navbar-brand">
@@ -42,22 +39,37 @@
             <li class="nav-item">
               <a
                 href="#"
+                onclick="gitApiBook()"
                 class="nav-link text-decoration-none"
-               onclick="hhhhh()"
                 >Home</a
               >
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link text-decoration-none"
-                >Book sections</a
-              >
-            </li>
+
             <li class="nav-item">
               <a href="#" class="nav-link text-decoration-none">Our services</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link text-decoration-none">call us</a>
-            </li>
+            <div class="dropdown" onclick="(drowpDownApi())" id="drowpDownApi">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu" >
+                  <li><a class="dropdown-item" value="advice-how-to-and-miscellaneous" href="#">Action</a></li>
+                  <li><a class="dropdown-item" value="paperback-nonfiction" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" value="trade-fiction-paperback" href="#">Action</a></li>
+                  <li><a class="dropdown-item" value="hardcover-nonfiction" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" value="Hardcover Fiction" href="#">Action</a></li>
+                  <li><a class="dropdown-item" value="combined-print-and-e-book-nonfiction" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" value="combined-print-and-e-book-fiction" href="#">Another action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
           </lu>
           <form class="d-flex">
             <select
@@ -89,35 +101,52 @@
         </div>
       </div>
     </nav>
-    <!-- ================end nav bar +++++++++++++++++ -->
-    <!-- ================swiper start +++++++++++++++++ -->
+    <!-- ===============1=end nav bar ========= -->
 
- <!-- <div class="swiper mySwiper">
+    <!-- ===========2=start swiper============= -->
+  <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="img/alexandria.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="img/Books17.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="img/images.jpeg" alt=""></div>
-      <div class="swiper-slide"><img src="img/lovepik-library-to-find-books-picture_501427968.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="img/pexels-photo-1370295.jpeg" alt=""></div>
-      <div class="swiper-slide"><img src="img/pngtree-an-open-book-next-to-a-pair-of-glasses-picture-image_2599835.jpg" alt=""></div>
-
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+      </div>
     </div>
-  </div> -->
+    <div class="swiper-pagination"></div>
+  </div>
+    <!-- ===========2=end swiper============= -->
 
-  <!-- ======================== end swpier===============+++++++++ -->
 
-    <div id="ForSingelBook" class="container m-3 ">
-    
-<h1 >jhkjdfshkjshdkjhsdkjhkjsdhfkjsdf</h1>
-
-  
+    <!-- =================3= start bady========= -->
+    <div class="suction container m-3" id="ForSingelBook">
+      <div class="row m-3 justify-content-center" id="bookInner"></div>
     </div>
-    <!-- *************************** -->
+    <!--========3= end bady======== -->
 
-    <!-- ***************************************** -->
 
-    <!-- ********************start footer********************* -->
-
+    <!-- ***************4**start footer ************************ -->
     <footer class="bg-body-tertiary text-center">
       <!-- Grid container -->
       <div class="container p-4 pb-0">
@@ -175,59 +204,59 @@
           <!-- Facebook -->
           <a
             data-mdb-ripple-init
-            class="btn btn-link btn-floating btn-lg text-body m-1"
+            class="btn text-white btn-floating m-1"
+            style="background-color: #3b5998"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
             ><i class="fab fa-facebook-f"></i
           ></a>
 
           <!-- Twitter -->
           <a
             data-mdb-ripple-init
-            class="btn btn-link btn-floating btn-lg text-body m-1"
+            class="btn text-white btn-floating m-1"
+            style="background-color: #55acee"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
             ><i class="fab fa-twitter"></i
           ></a>
 
           <!-- Google -->
           <a
             data-mdb-ripple-init
-            class="btn btn-link btn-floating btn-lg text-body m-1"
+            class="btn text-white btn-floating m-1"
+            style="background-color: #dd4b39"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
             ><i class="fab fa-google"></i
           ></a>
 
           <!-- Instagram -->
           <a
             data-mdb-ripple-init
-            class="btn btn-link btn-floating btn-lg text-body m-1"
+            class="btn text-white btn-floating m-1"
+            style="background-color: #ac2bac"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
             ><i class="fab fa-instagram"></i
           ></a>
 
           <!-- Linkedin -->
           <a
             data-mdb-ripple-init
-            class="btn btn-link btn-floating btn-lg text-body m-1"
+            class="btn text-white btn-floating m-1"
+            style="background-color: #0082ca"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-linkedin"></i
+            ><i class="fab fa-linkedin-in"></i
           ></a>
           <!-- Github -->
           <a
             data-mdb-ripple-init
-            class="btn btn-link btn-floating btn-lg text-body m-1"
+            class="btn text-white btn-floating m-1"
+            style="background-color: #333333"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
             ><i class="fab fa-github"></i
           ></a>
         </section>
@@ -245,8 +274,10 @@
       </div>
       <!-- Copyright -->
     </footer>
+    <!-- ***************4**end footer ************************ -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="js/book copy.js"></script>
   </body>

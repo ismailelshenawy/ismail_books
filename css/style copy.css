@@ -3,7 +3,18 @@
     width: 100vh;
 }
 
-/* ===================== */
+.color {
+    background: #6f42c1 !important
+}
+
+.color2 {
+    background: #ad91e2 !important
+}
+
+.color3 {
+    background: #1d132f !important
+}
+
 /* ===================== */
 body {
     position: relative;
