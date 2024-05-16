@@ -15,18 +15,18 @@ async function gitApiBook() {
   books = readBook2.results.books;
   var innerForHtml = ``;
   for (let i = 0; i < books.length; i++) {
-    innerForHtml += ` <div class="card col-md-4 col-sm-2 m-1 " style="width: 18rem">
+    innerForHtml += ` <div class="card bg-color3 col-md-4 col-sm-2 m-1 " style="width: 18rem">
         <img src="${books[i].book_image}" alt="" class="card-img-top" onclick=" display(${i})">
-          <div class="card-body">
+          <div class="card-body ">
             <h5 class="card-title">${books[i].title}</h5>
             <p class="موضوع الكتاب">
          ${books[i].description}.
             </p>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"> ${books[i].title}اسم الكتاب</li>
-            <li class="list-group-item"> ${books[i].author}اسم المؤلف</li>
-            <li class="list-group-item">${books[i].publisher}الناشر</li>
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item bg-color4"> ${books[i].title}اسم الكتاب</li>
+            <li class="list-group-item bg-color4"> ${books[i].author}اسم المؤلف</li>
+            <li class="list-group-item bg-color4">${books[i].publisher}الناشر</li>
           </ul>
           <div class="موضوع الكتاب">
             <a href="${books[i].buy_links[0].url}" class="card-link">شراء الكتاب</a>
@@ -47,7 +47,7 @@ gitApiBook();
 function display(i) {
  
   innerForHtml = `<div class="row bg-body-tertiary ">
-        <div class="col p-0 ">
+        <div class="col p-0 bg- ">
           <img
             src="${books[i].book_image}"
             alt=""
@@ -86,9 +86,9 @@ function display(i) {
         </div>
       </div>
      `;
-  ForSingelBook.innerHTML = innerForHtml;
+  bookInner.innerHTML = innerForHtml;
 }
-display();
+
 // =========================end funtion for singel book===========
 
 
@@ -150,6 +150,7 @@ var swiper = new Swiper(".mySwiper", {
     depth: 100,
     modifier: 1,
     slideShadows: true,
+  
   },
   pagination: {
     el: ".swiper-pagination",

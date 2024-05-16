@@ -1,6 +1,30 @@
-.w-h {
-    height: 100vh;
-    width: 100vh;
+:root {
+    --color1: #6c5ce7;
+    --color2: #968dd9;
+    --color3: rgba(166, 148, 179, 0.671);
+    --color4: #8d85ca;
+    --text1: #b7afb9;
+}
+
+.text1 {
+    color: var(--text1)
+}
+
+
+.bg-color1 {
+    background-color: var(--color1);
+}
+
+.bg-color2 {
+    background-color: var(--color2);
+}
+
+.bg-color3 {
+    background-color: var(--color3);
+}
+
+.bg-color4 {
+    background-color: var(--color4);
 }
 
 /* ===================== */
