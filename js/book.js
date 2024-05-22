@@ -1,7 +1,7 @@
 var bookInner = document.getElementById("bookInner");
 var readBook1;
 var readBook2;
-var books=[];
+var books = [];
 var ForSingelBook = document.getElementById("ForSingelBook");
 var inputSearch = document.getElementById("inputSearch");
 // ده المفروض نوع فى list بيجيب كل الكتب full-overview
@@ -45,7 +45,6 @@ gitApiBook();
 // ==============strat function for singel book=========
 
 function display(i) {
- 
   innerForHtml = `<div class="row bg-body-tertiary ">
         <div class="col p-0 bg- ">
           <img
@@ -91,7 +90,6 @@ function display(i) {
 
 // =========================end funtion for singel book===========
 
-
 // ============== strat function for search ===============
 function searchBooks() {
   var search2 = inputSearch.value;
@@ -136,12 +134,14 @@ function searchBooks() {
 }
 // ============== end function for search ==============
 
-
 // ------ start  swiper  -----------
 
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
   grabCursor: true,
+  autoplay: {
+    delay: 1000,
+  },
   centeredSlides: true,
   slidesPerView: "auto",
   coverflowEffect: {
@@ -150,11 +150,9 @@ var swiper = new Swiper(".mySwiper", {
     depth: 100,
     modifier: 1,
     slideShadows: true,
-  
   },
   pagination: {
     el: ".swiper-pagination",
   },
 });
 // ------ end  swiper  -----------
-
